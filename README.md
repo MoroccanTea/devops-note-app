@@ -92,9 +92,6 @@ curl http://$ALB_DNS/api/todos
 
 ## 📊 Monitoring
 
-### CloudWatch Dashboard
-https://console.aws.amazon.com/cloudwatch/home?region=eu-west-1#dashboards:name=devops-infrastructure-dashboard
-
 ### Logs
 - Application: `/aws/application/devops-todo-app`
 - EC2: `/aws/ec2/devops-backend`
