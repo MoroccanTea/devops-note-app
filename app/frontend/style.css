@@ -1,0 +1,201 @@
+/* Styles personnalisés */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3) !important;
+}
+
+/* Statistics Cards */
+.stat-card {
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+}
+
+.stat-card .display-4 {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Todo Items */
+.todo-item {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    background: white;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.todo-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.todo-item.completed {
+    border-left-color: #28a745;
+    background: #f8f9fa;
+}
+
+.todo-item h6 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.todo-item .text-decoration-line-through {
+    opacity: 0.7;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-group-vertical .btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 1rem;
+}
+
+/* Form */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    padding: 0.75rem;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+/* Toast Notifications */
+.toast {
+    border-radius: 10px;
+    border: none;
+}
+
+.toast.bg-success {
+    background-color: #28a745 !important;
+}
+
+.toast.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+/* Badges */
+.badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+    
+    .todo-item {
+        padding: 1rem;
+    }
+    
+    .btn-group-vertical {
+        flex-direction: row !important;
+    }
+    
+    .btn-group-vertical .btn {
+        flex: 1;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todo-item {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Loading state */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+}
+
+/* Icons */
+.bi {
+    vertical-align: middle;
+}
+
+/* Empty state */
+.text-muted i {
+    opacity: 0.5;
+}
+
+/* Header */
+h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: 700;
+}
+
+.lead {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Error alert */
+.alert {
+    border-radius: 10px;
+    border: none;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
